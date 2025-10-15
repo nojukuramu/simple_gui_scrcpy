@@ -62,22 +62,13 @@ A professional, user-friendly graphical interface for [scrcpy](https://github.co
 | **💾 Persistent Config** | Save scrcpy paths, device settings, and preferences |
 | **📚 Rich Documentation** | In-app help, troubleshooting guides, multiple setup methods |
 
-- Python virtual environments (venv)
-
----- System Python
-
-- Custom environment managers
-
 ## 📋 Requirements
 
 ### 📱 Wireless ADB Pairing
 
 - **OS:** Windows 10/11- Built-in wireless pairing interface for Android 11+
-
 - **Python:** 3.7+ (Anaconda/Miniconda recommended)- Step-by-step pairing instructions
-
 - **Scrcpy:** Latest version ([Download here](https://github.com/Genymobile/scrcpy/releases))- Real-time pairing status feedback
-
 - **Android:** Device with USB debugging or Wireless debugging enabled
 
 ### 💾 Persistent Configuration
