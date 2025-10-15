@@ -54,9 +54,9 @@ A professional, user-friendly graphical interface for [scrcpy](https://github.co
 
 
 
-| Feature | Description |### 🔌 Easy Connection Management
+| Feature | Description |### 🔌 Easy Connection Management |
 
-|---------|-------------|- Quick connect with IP address and port
+|---------|-------------|- Quick connect with IP address and port |
 
 | **🔌 Easy Connections** | Quick connect with IP/port, view paired devices, one-click connections |- View and manage paired devices
 
