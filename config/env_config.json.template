@@ -1,0 +1,28 @@
+{
+    "environment": {
+        "type": "conda",
+        "name": "aisa_env",
+        "activate_command": "conda activate aisa_env"
+    },
+    "python": {
+        "executable": "python",
+        "use_pythonw": true
+    },
+    "notes": {
+        "info": "This is a template configuration file.",
+        "usage": "Edit the values above to match your Python environment.",
+        "environment_types": {
+            "conda": "Anaconda/Miniconda environment",
+            "venv": "Python virtual environment",
+            "system": "System Python (no activation needed)",
+            "custom": "Custom activation command"
+        },
+        "examples": {
+            "conda": "conda activate YOUR_ENV_NAME",
+            "venv_windows": "C:\\path\\to\\venv\\Scripts\\activate",
+            "venv_linux": "source /path/to/venv/bin/activate",
+            "custom": "YOUR_CUSTOM_COMMAND_HERE"
+        },
+        "documentation": "See docs/CONFIG_EXAMPLES.md for more examples"
+    }
+}

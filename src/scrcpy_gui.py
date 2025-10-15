@@ -398,10 +398,12 @@ Solution: Make sure ADB path is correct in Settings, or leave empty
     def run_command(self, command, show_output=True):
         """Run a command and return output"""
         try:
-            # Hide console window for subprocess
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            startupinfo.wShowWindow = subprocess.SW_HIDE
+            # Hide console window for subprocess (Windows only)
+            startupinfo = None
+            if os.name == 'nt':  # Windows
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                startupinfo.wShowWindow = subprocess.SW_HIDE
             
             result = subprocess.run(command, capture_output=True, text=True, 
                                    shell=True, timeout=10, startupinfo=startupinfo)
@@ -465,10 +467,12 @@ Solution: Make sure ADB path is correct in Settings, or leave empty
                 # Launch scrcpy without console window
                 scrcpy_path = self.get_scrcpy_path()
                 
-                # Use CREATE_NO_WINDOW flag to hide console
-                startupinfo = subprocess.STARTUPINFO()
-                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-                startupinfo.wShowWindow = subprocess.SW_HIDE
+                # Use CREATE_NO_WINDOW flag to hide console (Windows only)
+                startupinfo = None
+                if os.name == 'nt':  # Windows
+                    startupinfo = subprocess.STARTUPINFO()
+                    startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                    startupinfo.wShowWindow = subprocess.SW_HIDE
                 
                 subprocess.Popen(f'"{scrcpy_path}" --tcpip={ip}:{port}', 
                                shell=True, startupinfo=startupinfo)
@@ -497,10 +501,12 @@ Solution: Make sure ADB path is correct in Settings, or leave empty
         def launch():
             scrcpy_path = self.get_scrcpy_path()
             
-            # Use CREATE_NO_WINDOW flag to hide console
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            startupinfo.wShowWindow = subprocess.SW_HIDE
+            # Use CREATE_NO_WINDOW flag to hide console (Windows only)
+            startupinfo = None
+            if os.name == 'nt':  # Windows
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                startupinfo.wShowWindow = subprocess.SW_HIDE
             
             # If device is IP:PORT format, use --tcpip, otherwise use -s
             if ':' in device:
@@ -546,9 +552,27 @@ Solution: Make sure ADB path is correct in Settings, or leave empty
         threading.Thread(target=pair, daemon=True).start()
 
 def main():
-    root = tk.Tk()
-    app = ScrcpyGUI(root)
-    root.mainloop()
+    try:
+        root = tk.Tk()
+        app = ScrcpyGUI(root)
+        root.mainloop()
+    except Exception as e:
+        import traceback
+        error_msg = f"Error starting Scrcpy GUI:\n\n{str(e)}\n\n{traceback.format_exc()}"
+        print(error_msg)
+        try:
+            # Try to show error in message box
+            root = tk.Tk()
+            root.withdraw()
+            messagebox.showerror("Scrcpy GUI Error", error_msg)
+        except:
+            # If that fails, just print
+            print("\n" + "="*50)
+            print("FATAL ERROR - GUI Could Not Start")
+            print("="*50)
+            print(error_msg)
+            print("="*50)
+            input("\nPress Enter to exit...")
 
 if __name__ == "__main__":
     main()

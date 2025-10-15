@@ -1,0 +1,11 @@
+{
+    "environment": {
+        "type": "conda",
+        "name": "aisa_env",
+        "activate_command": "conda activate aisa_env"
+    },
+    "python": {
+        "executable": "python",
+        "use_pythonw": true
+    }
+}
