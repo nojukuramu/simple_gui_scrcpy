@@ -54,19 +54,13 @@ A professional, user-friendly graphical interface for [scrcpy](https://github.co
 
 
 
-| Feature | Description | |
-
-|---------|-------------|---- |
-
-| **🔌 Easy Connections** | Quick connect with IP/port, view paired devices, one-click connections |- View and manage paired devices
-
-| **⚙️ Flexible Environments** | Support for conda, venv, system Python, and custom setups |- One-click connection to saved devices
-
+| Feature | Description |
+|---------|-------------|
+| **🔌 Easy Connections** | Quick connect with IP/port, view paired devices, one-click connections |
+| **⚙️ Flexible Environments** | Support for conda, venv, system Python, and custom setups |
 | **📱 Wireless Pairing** | Built-in ADB pairing for Android 11+ with step-by-step guides |
-
-| **💾 Persistent Config** | Save scrcpy paths, device settings, and preferences |### ⚙️ Flexible Environment Support
-
-| **📚 Rich Documentation** | In-app help, troubleshooting guides, multiple setup methods |- Conda environments
+| **💾 Persistent Config** | Save scrcpy paths, device settings, and preferences |
+| **📚 Rich Documentation** | In-app help, troubleshooting guides, multiple setup methods |
 
 - Python virtual environments (venv)
 
