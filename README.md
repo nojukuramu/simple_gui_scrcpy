@@ -1,304 +1,423 @@
-# Scrcpy GUI Wrapper# Scrcpy GUI Wrapper
+# Scrcpy GUI Wrapper
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![Platform: Windows](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
-
-[![Platform: Windows](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)[![Platform: Windows](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
-
-
-
-A professional, user-friendly graphical interface for [scrcpy](https://github.com/Genymobile/scrcpy) that simplifies wireless Android screen mirroring on Windows.A professional, user-friendly graphical interface for [scrcpy](https://github.com/Genymobile/scrcpy) that simplifies wireless Android screen mirroring on Windows.
-
-
-
-------
-
-
-
-## 🎯 Quick Start## 🎯 Quick Start
-
-
-
-**📚 Documentation Quick Links:****First time?** See [docs/ENVIRONMENT_SETUP.md](docs/ENVIRONMENT_SETUP.md) for a quick configuration guide!
-
-- **First time?** See [docs/ENVIRONMENT_SETUP.md](docs/ENVIRONMENT_SETUP.md)
-
-- **Configuration examples?** See [docs/CONFIG_EXAMPLES.md](docs/CONFIG_EXAMPLES.md)**Not sure which file does what?** See [docs/FILE_GUIDE.md](docs/FILE_GUIDE.md) for a complete file reference!
-
-- **File reference?** See [docs/FILE_GUIDE.md](docs/FILE_GUIDE.md)
-
-- **Troubleshooting?** See [docs/TROUBLESHOOTING_LAUNCH.md](docs/TROUBLESHOOTING_LAUNCH.md)**Need configuration examples?** See [docs/CONFIG_EXAMPLES.md](docs/CONFIG_EXAMPLES.md) for ready-to-use templates!
-
-
-
-### Quick Setup Steps### Quick Setup Steps
-
-
-
-1. **Configure environment:** Edit `config/env_config.json`1. Edit `config/env_config.json` to match your Python environment (conda/venv/system)
-
-2. **Test setup:** Run `launch_gui.bat`2. Run `launch_gui.bat` to test
-
-3. **Normal use:** Double-click `launch_gui.vbs`3. Use `launch_gui.vbs` for normal use (no console window)
-
-
-
-------
-
-
-
-## ✨ Features## ✨ Features
-
-
-
-| Feature | Description |### 🔌 Easy Connection Management
-
-|---------|-------------|- Quick connect with IP address and port
-
-| **🔌 Easy Connections** | Quick connect with IP/port, view paired devices, one-click connections |- View and manage paired devices
-
-| **⚙️ Flexible Environments** | Support for conda, venv, system Python, and custom setups |- One-click connection to saved devices
-
-| **📱 Wireless Pairing** | Built-in ADB pairing for Android 11+ with step-by-step guides |
-
-| **💾 Persistent Config** | Save scrcpy paths, device settings, and preferences |### ⚙️ Flexible Environment Support
-
-| **📚 Rich Documentation** | In-app help, troubleshooting guides, multiple setup methods |- Conda environments
-
-- Python virtual environments (venv)
-
----- System Python
-
-- Custom environment managers
-
-## 📋 Requirements
-
-### 📱 Wireless ADB Pairing
-
-- **OS:** Windows 10/11- Built-in wireless pairing interface for Android 11+
-
-- **Python:** 3.7+ (Anaconda/Miniconda recommended)- Step-by-step pairing instructions
-
-- **Scrcpy:** Latest version ([Download here](https://github.com/Genymobile/scrcpy/releases))- Real-time pairing status feedback
-
-- **Android:** Device with USB debugging or Wireless debugging enabled
-
-### 💾 Persistent Configuration
-
----- Save scrcpy directory path
-
-- Store default device IP and port
-
-## 🚀 Installation- Persistent settings across sessions
-
-
-
-### 1. Clone or Download### 📚 Comprehensive Documentation
-
-- In-app help and troubleshooting
-
-```bash- Step-by-step connection guides
-
-git clone https://github.com/nojukuramu/simple_gui_scrcpy.git- Detailed setup instructions
-
-cd simple_gui_scrcpy
-
-```
-
-
-
-### 2. Configure Your Environment
-
-- **💾 Persistent Configuration**📱 **Wireless Pairing**
-
-Edit `config/env_config.json`:
-
-  - Save scrcpy installation path- Built-in ADB pairing interface
-
-```json
-
-{  - Store device IP addresses and ports- Step-by-step guidance
-
-    "environment": {
-
-        "type": "conda",  - Configurable Python environment settings- Real-time pairing output
-
-        "name": "your_env_name",
-
-        "activate_command": "conda activate your_env_name"
-
-    },
-
-    "python": {- **📚 Comprehensive Documentation**📖 **Comprehensive Help**
-
-        "executable": "python",
-
-        "use_pythonw": true  - In-app help and troubleshooting- Detailed setup instructions
-
-    }
-
-}  - Multiple connection method guides- Troubleshooting guide
-
-```
-
-  - Detailed setup instructions- Multiple connection methods
-
-**Environment types:** `conda` | `venv` | `system` | `custom`
-
-
-
-See [docs/CONFIG_EXAMPLES.md](docs/CONFIG_EXAMPLES.md) for more examples.
-
----## Requirements
-
-### 3. Launch the Application
-
-
-
-**First time (with console):**
-
-```bash## 📋 Requirements- Windows OS
-
-launch_gui.bat
-
-```- Python 3.7 or higher
-
-
-
-**Normal use (silent):**- **Operating System:** Windows 10/11- scrcpy (includes ADB)
-
-```
-
-Double-click: launch_gui.vbs- **Python:** 3.7 or higher (Anaconda/Miniconda recommended)- Android device with USB debugging or Wireless debugging enabled
-
-```
-
-- **scrcpy:** Latest version ([Download](https://github.com/Genymobile/scrcpy/releases))- **Python Environment**: Conda, venv, or system Python (configurable)
-
-**Debug mode:**
-
-```bash- **Android Device:** USB debugging or Wireless debugging enabled
-
-launchers\launch_gui_debug.bat
-
-```## Installation
-
-
-
-### 4. Configure Scrcpy Path---
-
-
-
-1. Launch the GUI### Step 1: Install Python
-
-2. Go to **Settings** tab
-
-3. Browse for your scrcpy installation directory## 🚀 Quick Start1. Download Python from https://www.python.org/downloads/
-
-4. Click **Save Configuration**
-
-   **OR** install Anaconda/Miniconda from https://www.anaconda.com/
+A clean GUI for [scrcpy](https://github.com/Genymobile/scrcpy) that makes wireless Android screen mirroring easy on Windows.
 
 ---
 
-### 1. Clone or Download2. During installation, check "Add Python to PATH"
+## Quick Start
 
-## 📁 Project Structure
+- Edit `config/env_config.json`
+- Run `./launch_gui.bat` (first run shows console)
+- Next time, double‑click `launch_gui.vbs` (silent)
 
-3. Complete the installation
+Docs: [Environment Setup](docs/ENVIRONMENT_SETUP.md) • [Config Examples](docs/CONFIG_EXAMPLES.md) • [File Guide](docs/FILE_GUIDE.md) • [Troubleshooting](docs/TROUBLESHOOTING_LAUNCH.md)
+
+---
+
+## Features
+
+- Connect by IP:port; list paired devices; one‑click connect
+- Works with conda, venv, system, or custom Python
+- Wireless ADB pairing for Android 11+
+- Saves scrcpy path, defaults, and preferences
+- In‑app help plus full docs
+
+---
+
+## Requirements
+
+- Windows 10/11
+- Python 3.7+ with tkinter
+- scrcpy installed
+- Android device with USB or Wireless debugging
+
+---
+
+## Install & Launch
+
+1) Configure environment: edit `config/env_config.json`
+
+Example (conda):
+
+```json
+{
+    "environment": {
+        "type": "conda",
+        "name": "aisa_env",
+        "activate_command": "conda activate aisa_env"
+    },
+    "python": {
+        "executable": "python",
+        "use_pythonw": true
+    }
+}
+```
+
+2) Launch
+
+- First run: `./launch_gui.bat`
+- Normal: double‑click `launch_gui.vbs`
+- Debug: `./launchers/launch_gui_debug.bat`
+
+3) Point to scrcpy
+
+- App → Settings tab → choose scrcpy directory → Save
+
+More templates: [docs/CONFIG_EXAMPLES.md](docs/CONFIG_EXAMPLES.md)
+
+---
+
+## Usage
+
+### USB → Wi‑Fi (recommended)
+
+1. Enable USB debugging; connect via USB
+2. In a terminal: `adb tcpip 5555`
+3. Unplug; find device IP
+4. In app: enter `IP:5555` → Connect
+
+### Wireless Pairing (Android 11+)
+
+1. Device: Settings → Developer options → Wireless debugging → Pair
+2. App: Pair Device tab → enter IP, port, pairing code → Pair
+3. Then connect from the Connect tab with the device IP:port
+
+---
+
+## Project Structure
+
+```
+simple_gui_scrcpy/
+├─ src/                 # Python sources (scrcpy_gui.py)
+├─ launchers/           # .bat/.vbs launchers (debug/normal/silent)
+├─ config/              # env_config.json and templates
+├─ docs/                # guides and references
+├─ tools/               # diagnostics (test_setup.bat), legacy tools
+├─ launch_gui.bat       # root helper launcher
+├─ launch_gui.vbs       # silent root launcher
+└─ README.md
+```
+
+Details: [docs/FILE_GUIDE.md](docs/FILE_GUIDE.md)
+
+---
+
+## Troubleshooting
+
+- Debug logs: `./launchers/launch_gui_debug.bat`
+- Diagnostics: `./tools/test_setup.bat`
+- Common fixes:
+    - Install tkinter (conda: `conda install tk`)
+    - Verify env in `config/env_config.json`
+    - Ensure PC and phone share Wi‑Fi
+
+More: [docs/TROUBLESHOOTING_LAUNCH.md](docs/TROUBLESHOOTING_LAUNCH.md)
+
+---
+
+## Documentation
+
+- Environment: [docs/ENVIRONMENT_SETUP.md](docs/ENVIRONMENT_SETUP.md)
+- Config: [docs/CONFIG_EXAMPLES.md](docs/CONFIG_EXAMPLES.md)
+- Files: [docs/FILE_GUIDE.md](docs/FILE_GUIDE.md)
+- Architecture: [ARCHITECTURE.md](ARCHITECTURE.md)
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+MIT — see LICENSE.
+
+## Support
+
+Open an issue or run the debug launcher for quick clues.
+
+---
+
+Version: 1.1.0 • Updated: 2025‑10‑15
+
+
+    "environment": {
+
+        "type": "venv",```- Python 3.7 or higher
+
+        "name": "myvenv",
+
+        "activate_command": "C:\\path\\to\\venv\\Scripts\\activate"
+
+    }
+
+}**Normal use (silent):**- **Operating System:** Windows 10/11- scrcpy (includes ADB)
 
 ```
 
+```
+
+**System Python:**
+
+```jsonDouble-click: launch_gui.vbs- **Python:** 3.7 or higher (Anaconda/Miniconda recommended)- Android device with USB debugging or Wireless debugging enabled
+
+{
+
+    "environment": {```
+
+        "type": "system",
+
+        "name": "system",- **scrcpy:** Latest version ([Download](https://github.com/Genymobile/scrcpy/releases))- **Python Environment**: Conda, venv, or system Python (configurable)
+
+        "activate_command": ""
+
+    }**Debug mode:**
+
+}
+
+``````bash- **Android Device:** USB debugging or Wireless debugging enabled
+
+
+
+**More examples:** See [docs/CONFIG_EXAMPLES.md](docs/CONFIG_EXAMPLES.md)launchers\launch_gui_debug.bat
+
+
+
+---```## Installation
+
+
+
+## 🔧 Troubleshooting
+
+
+
+### GUI Won't Start### 4. Configure Scrcpy Path---
+
+
+
+```bash
+
+# Run debug launcher to see errors
+
+launchers\launch_gui_debug.bat1. Launch the GUI### Step 1: Install Python
+
+
+
+# Or run diagnostic tool2. Go to **Settings** tab
+
+tools\test_setup.bat
+
+```3. Browse for your scrcpy installation directory## 🚀 Quick Start1. Download Python from https://www.python.org/downloads/
+
+
+
+### Common Issues4. Click **Save Configuration**
+
+
+
+| Problem | Solution |   **OR** install Anaconda/Miniconda from https://www.anaconda.com/
+
+|---------|----------|
+
+| **Missing tkinter** | `conda install tk` or `pip install tk` |---
+
+| **Wrong environment** | Check `config/env_config.json`, verify with `conda env list` |
+
+| **Can't connect** | Ensure device and PC on same Wi-Fi, verify IP address |### 1. Clone or Download2. During installation, check "Add Python to PATH"
+
+| **Python not found** | Set `"use_pythonw": false` in config to see errors |
+
+## 📁 Project Structure
+
+**Detailed troubleshooting:** See [docs/TROUBLESHOOTING_LAUNCH.md](docs/TROUBLESHOOTING_LAUNCH.md)
+
+3. Complete the installation
+
+---
+
+```
+
+## 📚 Documentation
+
 simple_gui_scrcpy/```bash
 
-├── 📂 src/               → Source code (scrcpy_gui.py)
+| Document | Description |
 
-├── 📂 launchers/         → Launch scripts (bat, vbs, debug)git clone https://github.com/nojukuramu/simple_gui_scrcpy.git### Step 2: Install scrcpy
+|----------|-------------|├── 📂 src/               → Source code (scrcpy_gui.py)
 
-├── 📂 config/            → Configuration files (env_config.json)
+| [ENVIRONMENT_SETUP.md](docs/ENVIRONMENT_SETUP.md) | Quick 5-minute setup guide |
 
-├── 📂 docs/              → Documentation (guides, examples, help)cd simple_gui_scrcpy1. Download scrcpy from https://github.com/Genymobile/scrcpy/releases
+| [CONFIG_EXAMPLES.md](docs/CONFIG_EXAMPLES.md) | Ready-to-use configuration templates |├── 📂 launchers/         → Launch scripts (bat, vbs, debug)git clone https://github.com/nojukuramu/simple_gui_scrcpy.git### Step 2: Install scrcpy
 
-├── 📂 tools/             → Utilities (test_setup.bat, legacy tools)
+| [FILE_GUIDE.md](docs/FILE_GUIDE.md) | Complete file and folder reference |
 
-├── launch_gui.bat        → Main launcher (with console)```2. Extract to a folder (e.g., `C:\Program Files\scrcpy-win64-v3.3.1`)
+| [TROUBLESHOOTING_LAUNCH.md](docs/TROUBLESHOOTING_LAUNCH.md) | Common issues and solutions |├── 📂 config/            → Configuration files (env_config.json)
 
-├── launch_gui.vbs        → Silent launcher (no console)
+| [QUICK_REFERENCE.txt](docs/QUICK_REFERENCE.txt) | One-page cheat sheet |
 
-├── setup.bat             → First-time setup wizard3. Note the installation path
-
-└── README.md             → This file
-
-```### 2. Configure Your Environment
+| [ARCHITECTURE.md](ARCHITECTURE.md) | System architecture and design |├── 📂 docs/              → Documentation (guides, examples, help)cd simple_gui_scrcpy1. Download scrcpy from https://github.com/Genymobile/scrcpy/releases
 
 
 
-**Detailed structure:** See [docs/FILE_GUIDE.md](docs/FILE_GUIDE.md)### Step 3: Configure Python Environment
+---├── 📂 tools/             → Utilities (test_setup.bat, legacy tools)
 
 
+
+## 🛠️ Development├── launch_gui.bat        → Main launcher (with console)```2. Extract to a folder (e.g., `C:\Program Files\scrcpy-win64-v3.3.1`)
+
+
+
+### Running from Source├── launch_gui.vbs        → Silent launcher (no console)
+
+
+
+```bash├── setup.bat             → First-time setup wizard3. Note the installation path
+
+# Activate your environment
+
+conda activate your_env└── README.md             → This file
+
+
+
+# Install dependencies (if needed)```### 2. Configure Your Environment
+
+conda install tk
+
+
+
+# Run directly
+
+python src/scrcpy_gui.py**Detailed structure:** See [docs/FILE_GUIDE.md](docs/FILE_GUIDE.md)### Step 3: Configure Python Environment
+
+```
+
+
+
+### Testing
 
 ---Edit `config/env_config.json` to match your Python setup:1. Place all files in a folder (e.g., `C:\Users\YourName\Desktop\SCREEN`)
 
+```bash
 
+# Comprehensive diagnostics
+
+tools\test_setup.bat
 
 ## 🎯 Usage2. **IMPORTANT**: Edit `env_config.json` to match your Python environment
 
+# Debug mode
 
+launchers\launch_gui_debug.bat
+
+```
 
 ### Connecting Your Device```json3. See [Python Environment Configuration](#python-environment-configuration) below
 
+---
 
+
+
+## 🤝 Contributing
 
 #### Method 1: USB to Wireless (Recommended){
 
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 
-1. Connect Android device via USB    "environment": {### Step 4: Launch the Application
 
-2. Enable USB debugging (Settings → Developer Options)
+**Quick steps:**
 
-3. Run in terminal: `adb tcpip 5555`        "type": "conda",- **With Console** (for troubleshooting): Double-click `launch_gui.bat`
+1. Fork the repository1. Connect Android device via USB    "environment": {### Step 4: Launch the Application
 
-4. Disconnect USB cable
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 
-5. Find device IP: Settings → About → Status → IP Address        "name": "your_env_name",- **Without Console** (clean): Double-click `launch_gui.vbs` or `launch_gui_silent.bat`
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)2. Enable USB debugging (Settings → Developer Options)
 
-6. In GUI: Enter IP and port `5555`, click **Connect**
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 
-        "activate_command": "conda activate your_env_name"
+5. Open a Pull Request3. Run in terminal: `adb tcpip 5555`        "type": "conda",- **With Console** (for troubleshooting): Double-click `launch_gui.bat`
 
-#### Method 2: Wireless Pairing (Android 11+)
 
-    },## Python Environment Configuration
+
+---4. Disconnect USB cable
+
+
+
+## 📄 License5. Find device IP: Settings → About → Status → IP Address        "name": "your_env_name",- **Without Console** (clean): Double-click `launch_gui.vbs` or `launch_gui_silent.bat`
+
+
+
+This project is licensed under the MIT License.6. In GUI: Enter IP and port `5555`, click **Connect**
+
+
+
+---        "activate_command": "conda activate your_env_name"
+
+
+
+## 🙏 Acknowledgments#### Method 2: Wireless Pairing (Android 11+)
+
+
+
+- **[scrcpy](https://github.com/Genymobile/scrcpy)** - The excellent screen mirroring tool    },## Python Environment Configuration
+
+- **[Android Debug Bridge (ADB)](https://developer.android.com/tools/adb)** - Android debugging tools
 
 1. On device: Settings → Developer Options → Wireless Debugging → Enable
 
+---
+
 2. Tap **Pair device with pairing code**    "python": {
+
+## 📞 Support
 
 3. In GUI: Go to **Pair Device** tab
 
-4. Enter IP, port, and pairing code from your device        "executable": "python",The application uses `env_config.json` to determine which Python environment to use.
+- **Issues:** [GitHub Issues](https://github.com/nojukuramu/simple_gui_scrcpy/issues)
+
+- **Documentation:** [docs/](docs/) folder4. Enter IP, port, and pairing code from your device        "executable": "python",The application uses `env_config.json` to determine which Python environment to use.
+
+- **Quick Help:** Run `launchers\launch_gui_debug.bat`
 
 5. Click **Pair Device**
 
+---
+
 6. After pairing, use the connection IP:port in **Connect** tab        "use_pythonw": true
 
+## 🔖 Version
 
 
----    }### Configuration File: `env_config.json`
+
+**Version:** 1.1.0  
+
+**Last Updated:** October 15, 2025  ---    }### Configuration File: `env_config.json`
+
+**Status:** ✅ Stable
 
 
+
+---
 
 ## ⚙️ Configuration}
 
+<div align="center">
 
+
+
+**Made with ❤️ for easier Android screen mirroring**
 
 ### Python Environment Examples``````json
 
+[⬆ Back to Top](#scrcpy-gui-wrapper)
 
+
+
+</div>
 
 **Conda:**{
 
